@@ -1,0 +1,94 @@
+#banking system modified
+class Account:
+    def __init__(self):
+       print("Hello there!!!!")
+    
+    def show(self,balance,account_no):
+        self.balan=balance
+        self.account=account_no
+        print(f"your account no :{self.account} and your current balance is: {self.balan}")
+    def openaccount(self,name,mobile,openingbalance):
+        print(f"WE have sucessfully created your account: {name}\n{mobile}\n{openingbalance}")
+        
+    def withdrawal_amount(self,damount):
+        balan=100000
+        balan-=damount
+        print("you have withdraw total amount of: ",damount)
+        print(f"You have total balance of: {balan}")
+    def credit(self,amount):
+        balan=100000
+        balan+=amount
+        print("you have credited: ",amount)
+        print(f"You have balance of: {balan}")
+        
+    def print(self):
+        print("Your total amount is: ",self.balan)
+    def accountclose(self,name):
+        print("We are sorry that you are stupid: ",name)
+        
+
+s=Account() 
+b=True
+print("Welcome to the My/Your Bank")
+while b==True:
+    print("Select a digit for your required banking\n press 1 for account opening\n press 2 for balance inquiry\n press 3 for cash withdrawl\n press 4 for cash deposit\npress 5 for account deletion")      
+    a=int(input())
+    if a==1:
+        name=input("Enter your name: ")
+        num=input("Enter your mobile number: ")
+        open_balance=input("Kindly add some amount for new opening balance: ")
+        s.openaccount(name,num,open_balance)
+       
+    if a==2:
+        accounts=int(input("Enter your account number: "))
+        s.show(1000,accounts)
+    if a==3:
+        balances=int(input("How much you want to withdraw: "))
+        s.withdrawal_amount(balances)
+       
+    
+    if a==4:
+        creditamount=int(input("Enter your credit amount: "))
+        s.credit(creditamount)
+       
+    if a==5:
+        nam=input("Enter your name: ")
+        s.accountclose(nam)
+        print("Your account have been sucessfully deleted")
+   
+    h=input("Do you want to make another transction (YES/NO)").strip().lower()
+    if h=="yes":
+        b=True
+    elif h=="no":
+        b=False
+    else:
+        print("wrong command")
+        b=False
+
+
+# Define a employeee class with attribute role department and salary this aslo show details mehtod create enegeineer class that inherit
+# properties from employee  and addtional attribute nmae andgage 
+class Employee():
+    def __init__(self,role,department,salary):
+        self.role=role
+        self.department=department
+        self.salary=salary
+    def show_details(self):
+        print(f"your role{self.role} {self.department} {self.salary}")
+class Engineer(Employee):
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        super().__init__("game dev","development",124334)
+        
+e=Engineer("me",24)
+e.show_details()
+# dupilcation
+h="hello"
+for i in h:
+    if h.count(i)>1:
+        print(f"dublicate {i}")
+        break
+    else:
+        print("nothing found")       
+
