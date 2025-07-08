@@ -1,0 +1,8 @@
+first step: i created a new repo on GitHub website with the name python_rootpointer
+second step: i opened my git bash and clone the folder git clone and the link ending it with .git
+third step: i  went into the folder by cd and gave it the folder name i want 
+fourth step: inside the folder i created a folder with th the command mkdir make directory and name it python_code_file
+fifth step: moved the py file into the folder named python_code_file and cd.. to go back to the parent folder and created another folder for python_doc
+sixth step: moved the pdf in the doc folder and created a text file with the following command touch name git.txt
+seventh step: git add . to add everythings that changed and git commit -m to save it locally after this and add the GitHub remote and  pushed it  to GitHub
+
